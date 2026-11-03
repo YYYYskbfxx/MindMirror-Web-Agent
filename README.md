@@ -2,7 +2,7 @@
 
 独立 Web 项目。基于用户提供的 CHI 初稿第 3.2–3.4 节及访谈结果、讨论组织八天流程：首次引导、六天每日反思、第八天总结。对话由服务端通过火山方舟调用 DeepSeek-V4.1-Flash 经济版，读取 `knowledge.json` 中的 CBT 工具说明，并依据用户的自动想法选择证据探测器、可能性放大镜或视角转换。
 
-**[阅读完整案例](https://yyyyskbfxx.github.io/AI-Demo/mindmirror-project.html)** · [查看最新版界面预览](https://yyyyskbfxx.github.io/AI-Demo/mindmirror.html)
+**[阅读完整案例](https://yyyyskbfxx.github.io/AI-Demo/mindmirror-project.html)** · [查看最新版对话界面](https://yyyyskbfxx.github.io/AI-Demo/mindmirror.html#session)
 
 ## 产品定位
 
@@ -16,13 +16,23 @@
 
 初稿第 3.2 节规定第 1 天约 10 分钟，第 2—7 天每天完成一次反思，第 8 天回顾；第 3.3 节在形成更平衡的新想法后结束当次认知重构。初稿未规定对话轮数。Web 版本没有固定轮次上限：第 1 天先做自我介绍、轻松了解社交媒体使用的好处与困扰，在用户自己选定小目标后结束；用户也可随时点“结束今天”，系统保存历史并给一句小结。已结束的当天可点“继续今天”恢复对话。
 
-## 界面截图
+## 页面设计与功能
 
-| 八天旅程首页 | 每日对话与 CBT 引导 |
-| --- | --- |
-| [![心境最新版旅程首页：阶段与当天入口](images/journey-home.png)](images/journey-home.png) | [![心境最新版对话页：引导进度、CBT 工具和聊天区](images/daily-conversation.png)](images/daily-conversation.png) |
+以下界面截自本仓库最新版运行中的 Node 页面，点击图片可查看完整尺寸。第二张使用全新的虚构示例输入与实际模型回复，不包含已有用户对话。
 
-两张图均截自本仓库最新版运行中的 Node 页面。第二张使用全新的虚构示例输入，展示已配置模型服务时的实际回复；不包含已有用户对话。
+### ① 八天旅程
+
+<p align="center"><a href="images/journey-home.png"><img src="images/journey-home.png" alt="心境最新版旅程首页：阶段与当天入口" width="780"></a></p>
+
+- **旅程首页：**呈现当前天数、日期和继续练习入口。
+- **阶段说明：**第 1 天引导、第 2—7 天反思、第 8 天回顾。
+
+### ② 每日对话与 CBT 引导
+
+<p align="center"><a href="images/daily-conversation.png"><img src="images/daily-conversation.png" alt="心境最新版对话页：引导进度、工具状态与示例回复" width="780"></a></p>
+
+- **左侧引导：**显示对话焦点、阶段进度与 CBT 工具状态。
+- **主对话区：**用户消息发送后立即出现，随后显示生成状态与模型回复；支持结束或继续当天练习。
 
 ## 启动
 
